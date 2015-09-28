@@ -1,0 +1,172 @@
+@import "base";
+@import "compass";
+
+// SHORT HOWTO
+// =======Sprites
+// .whatever{
+// 	@include sized-sprite($icons, badge_hit);
+// 	@include retina{
+// 		@include sized-sprite($icons, badge_new);
+// 	}
+// }
+// =======animation example
+// @include keyframes(rotate) {
+//    from {
+//       @include rotate(0);
+//    }
+//    to {
+//       @include rotate(360);
+//    }
+// }
+// =======animation usage
+// body:hover{
+// 	@include animation(rotate 200s linear infinite);
+// }
+// =======gradient example
+// body{
+// @include background-image(linear-gradient(#232323, #5c5c5c));
+// }
+// =======making bw-images
+// img{@extend %gray;}
+// BTW these comments will not render into css
+
+/* --------------- reset.css --------------- */
+
+// @font-face {
+// 	font-family: "FixFont";
+// 	src: url();
+// }
+
+html, body, div, span, h1, h2, h3, h4, h5, h6, p, em, img, strong, sub, sup, b, u, i, dl, dt, dd, ol, ul, li, fieldset, form, label, table, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	vertical-align: baseline;
+	background: transparent;
+}
+
+a {
+	margin: 0;
+	padding: 0;
+	vertical-align: baseline;
+	background: transparent;
+	text-decoration: none;
+	color: #666;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+td, td img {
+	vertical-align: top;
+}
+
+input, select, button, textarea {
+	margin: 0;
+	font-size: 100%;
+	color: #666;
+}
+
+input[type="checkbox"] {
+	vertical-align: bottom;
+}
+
+input[type="radio"] {
+	vertical-align: text-bottom;
+}
+input::-ms-clear {
+    display: none;
+}
+sub {
+	vertical-align: sub;
+	font-size: smaller;
+}
+
+sup {
+	vertical-align: super;
+	font-size: smaller;
+}
+
+
+/* --------------- /reset.css --------------- */
+
+.clearfix:before, .clearfix:after {
+	content: " ";
+	display: block;
+	height: 0;
+	visibility: hidden;
+    clear: both;
+}
+
+.clearfix {
+	zoom: 1;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Lato:400,400italic,700italic,700);
+
+body {
+  font-size: 14px;
+  position: relative;
+  font-family: 'Lato', Arial, sans-serif;
+}
+
+label, input[type="button"], input[type="submit"], button {
+	cursor: pointer;
+}
+
+ul{
+  list-style: none;
+}
+
+//    VAR
+
+$black: #353738;
+$gray: #4d4959;
+$l-gray: #848789;
+$green: #64c29e;
+$l-wight: #f4f5fc;
+
+
+
+
+
+
+//  tegs
+
+.fl-right{
+  float: right;
+}
+
+.fl-left{
+  float: left;
+}
+
+.container-center{
+  margin: 0 auto;
+}
+
+img{
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+h2{
+  font-family: 'Lato', sans-serif;
+  text-transform: uppercase;
+  color: $black;
+  letter-spacing: 2px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+p{
+  font-family: 'Lato', sans-serif;
+  font-size: 18px;
+  color: $l-gray;
+  word-spacing: 2px;
+  line-height: 1.8em;
+}

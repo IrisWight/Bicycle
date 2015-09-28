@@ -1,0 +1,153 @@
+@import "base";
+
+.wrapper {
+  overflow: hidden;
+}
+
+header{
+  color: #f4f5fc;
+}
+
+.main-menu{
+  text-align: center;
+  padding: 30px 20px 0;
+  background: $l-wight;
+  ul{
+	li{
+	  display: inline-block;
+	  vertical-align: middle;
+	  &:before{
+		content: '.';
+		color: $gray;
+	  }
+	  &:first-child{
+		&:before{
+		  display: none;
+		}
+	  }
+	  a{
+		display: inline-block;
+		color: $gray;
+		text-transform: uppercase;
+		letter-spacing: 2px;
+		margin: 0 30px;
+		@include transition(all, .25s, linear);
+		img{
+		  display: inline-block;
+		}
+		&:hover{
+		  color: $green;
+		}
+	  }
+	}
+	.logo{
+	  &:before{
+		display: none;
+	  }
+	  & + li:before{
+		display: none;
+	  }
+	}
+  }
+}
+
+.header-bg{
+  min-height: 685px;
+  background: url("../img/hero-bg.jpg") no-repeat 50%;
+  background-size: cover;
+}
+
+.teaser{
+  padding: 115px 0;
+}
+
+.teaser__i{
+  text-align: center;
+  width: 70%;
+  margin: 0 auto;
+  .teaser-icon{
+	display: inline-block;
+	@include sized-sprite($icons, cog-icon);
+	margin-top: 28px;
+  }
+  .teaser-title{
+	padding-top: 28px;
+  }
+  .teaser-text{
+	margin-top: 25px;
+  }
+}
+
+.product-item {
+  text-align: center;
+  position: relative;
+  .product-item__img {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	background-size: cover;
+  }
+  .product-item__img_right{
+	left: auto;
+	right: 0;
+  }
+  .img-icon{
+	display: inline-block;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	background: 50% no-repeat;
+  }
+  .teaser-icon{
+	display: inline-block;
+	@include sized-sprite($icons, frame-icon);
+	margin-top: 78px;
+  }
+  .teaser-icon_mech{
+	@include sized-sprite($icons, mech-icon);
+  }
+  .teaser-icon_fork{
+	@include sized-sprite($icons, front-icon);
+  }
+  .teaser-title{
+	padding-top: 28px;
+  }
+  .teaser-text{
+	margin-top: 25px;
+	font-size: 14px;
+	text-align: justify;
+	padding: 0 60px;
+	&:after{
+	  content: ' ';
+	  display: block;
+	  height: 1px;
+	  width: 50px;
+	  background: #d7d7d7;
+	  margin: 32px auto 15px;
+	}
+  }
+  .prod-img{
+	position: relative;
+	background-size: cover;
+	height: 200px;
+	width: 100%;
+	&:before{
+	  content: ' ';
+	  display: block;
+	  position: absolute;
+	  top: 0;
+	  left: 50%;
+	  margin-left: -10px;
+	  border-left: 10px solid transparent;
+	  border-right: 10px solid transparent;
+	  border-top: 15px solid #fff;
+	}
+  }
+}
+
+
+
+
