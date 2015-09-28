@@ -130,23 +130,8 @@ $green: #64c29e;
 $l-wight: #f4f5fc;
 
 
-
-
-
-
 //  tegs
 
-.fl-right{
-  float: right;
-}
-
-.fl-left{
-  float: left;
-}
-
-.container-center{
-  margin: 0 auto;
-}
 
 img{
   display: block;
@@ -161,6 +146,15 @@ h2{
   letter-spacing: 2px;
   font-size: 18px;
   font-weight: 600;
+}
+
+h3{
+  font-family: 'Lato', sans-serif;
+  text-transform: uppercase;
+  color: #fff;
+  letter-spacing: 2px;
+  font-size: 14px;
+  font-weight: 700;
 }
 
 p{

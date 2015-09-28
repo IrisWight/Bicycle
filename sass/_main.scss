@@ -148,6 +148,93 @@ header{
   }
 }
 
+.tw-slider{
+  padding: 125px 0 90px;
+  .tw-slider__i{
+	.tw-item{
+	  text-align: center;
+	  padding: 0px 40px;
+	  .icon-tw{
+		display: block;
+		@include sized-sprite($icons, twitter-bird);
+		margin: 0 auto;
+		padding-bottom: 30px;
+	  }
+	  .tw-item__header{
+		.tw-link{
+		  color: #282f35;
+		  @include transition(all,.25s,linear);
+		  padding-bottom: 25px;
+		  letter-spacing: 2px;
+		  font-size: 18px;
+		  font-weight: 600;
+		  &:hover{
+			color: $green;
+		  }
+		}
+		span{
+		  color: $l-gray;
+		  font-weight: 300;
+		  letter-spacing: 2px;
+		  font-size: 18px;
+		}
+	  }
+	  p{
+		color: $l-gray;
+		font-size: 24px;
+		line-height: 1.8;
+		font-weight: 300;
+		margin: 25px 0 100px;
+	  }
+	}
+  }
+}
 
+//  ba-bicycle //
 
+.ba-bicycle{
+  position: relative;
+  img{
+	display: block;
+  }
+  .ba-bicycle__overlay{
+	visibility: hidden;
+	opacity: 0;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: rgba(100,194,158,.8);
+	text-align: center;
+	font-size: 0;
+	@include transition(all,.25s,linear);
+	.icon-bike{
+	  display: inline-block;
+	  background: url("../img/white-bike-icon.png") no-repeat 50% 0;
+	  padding-top: 40px;
+	  vertical-align: middle;
+	  @include transition(all,.25s,linear);
+	  opacity: 0;
+	  @include transform(translateY(-100px));
+	}
+  }
+  &:hover {
+	.ba-bicycle__overlay{
+	  visibility: visible;
+	  opacity: 1;
+	}
+	.icon-bike{
+	  opacity: 1;
+	  @include transform(translateY(0));
+	}
+  }
+}
 
+//    discover   //
+
+.discover{
+  padding: 70px 0;
+  background: #000;
+  text-align: center;
+}

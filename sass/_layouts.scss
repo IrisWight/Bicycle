@@ -1,6 +1,44 @@
 @import "base";
 
 
+
+.fl-right{
+  float: right;
+}
+
+.fl-left{
+  float: left;
+}
+
+.container-center{
+  margin: 0 auto;
+}
+
+/* Vertical align */
+.el-vert-align:before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+
+[class*="el-vert-align-"] {
+  display: inline-block;
+}
+
+.el-vert-align-top {
+  vertical-align: top;
+}
+
+.el-vert-align-middle {
+  vertical-align: middle;
+}
+
+.el-vert-align-bottom {
+  vertical-align: bottom;
+}
+
+
 /*== Grid ==*/
 /* Grid clearfix */
 
