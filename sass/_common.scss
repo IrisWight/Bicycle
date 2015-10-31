@@ -164,3 +164,38 @@ p{
   word-spacing: 2px;
   line-height: 1.8em;
 }
+
+.btn{
+  display: inline-block;
+  font-family: 'Lato', sans-serif;;
+  font-size: 14px;
+  height: 42px;
+  line-height: 42px;
+  padding: 0 30px;
+  color: #fff;
+  background: $green;
+  border: 1px solid $green;
+  text-transform: uppercase;
+  @include transition(all,.25s,linear);
+  @include respond-to(mobile){
+	font-size: 12px;
+  }
+  &:hover{
+	background: #519d80;
+  }
+}
+
+input[type="email"]{
+  border: solid 1px #d3d7d9;
+  padding: 0 25px;
+  color: #929292;
+  font-style: italic;
+  letter-spacing: 1px;
+  height: 42px;
+  line-height: 42px;
+  vertical-align: middle;
+  &:focus{
+	outline: none;
+	border-color: $green;
+  }
+}
